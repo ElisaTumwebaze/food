@@ -3,8 +3,7 @@ html,body{
 	height: 100%;
 	width: 100%;
 	place-items:center;
-	background: #f2f2f2;
-	background: -webkit-linear-gradient(left,#a445b2,#fa4299);
+	background: #f2f2f2;	
 }
 .wrapper{
 	overflow: hidden;
@@ -94,7 +93,7 @@ input[type="radio"]{
 .form-inner form .field{
 	height: 50px;
  	width: 100%;
-	margin-top:20px;
+	margin-top:15px;
 } 
 .form-inner form .field input{
 	height: 100%;

@@ -6,7 +6,9 @@
 }
 
 body{
-	font-family: ;
+	font-family:sans-serif;
+	
+
 }
 nav{
 	height: 80px;
@@ -75,7 +77,7 @@ nav a{
 		height: 100vh;
 		background: #2f3640;
 		top: 80px;
-		left: -100%;
+		left: 0;
 		text-align: center;
 		transition: all .5s;
 	}
@@ -90,9 +92,24 @@ nav a{
 	a.active,a:hover{
 		border:none;
 		color: #3498db;
+	}
 
-	}
-	nav ul .show{
-		left: 0;
-	}
+}
+
+table{
+	margin-top: 10px;
+	color: #d96459;
+	border-collapse: collapse;
+	width: 50%;
+	font-family: monospace;
+	font-size: 25px;
+
+}
+th{
+	background-color: #d96459;
+	color: #fff;
+}
+#order{
+	margin-left: 20px;
+	align-content: center;
 }
