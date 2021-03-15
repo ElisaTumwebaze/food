@@ -3,8 +3,10 @@ html,body{
 	height: 100%;
 	width: 100%;
 	place-items:center;
-	background: #f2f2f2;	
+	background-color: #48505a;
+
 }
+
 .wrapper{
 	overflow: hidden;
 	max-width: 390px;
@@ -13,15 +15,21 @@ html,body{
 	border-radius: 5px;
 	box-shadow: 0px 12px 20px rgb(0,0,0,0.1);
 }
+.wrapper.header{
+	font-weight: bold;
+	background-color: #3498db;
+}
 .wrapper .title-text{
 	display: flex;
-	width: 200%;
+	width: 200%;	
 }
 .wrapper .title-text .title{
 	width: 50%;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: 600;
 	text-align: center;
+	font-family: Tahoma;
+	color: #f98f39;
 }
 .wrapper .form-container{
 	width: 100%;
@@ -61,7 +69,7 @@ html,body{
 	width: 50%;
 	left: 0;
 	z-index: 0;
-	background: -webkit-linear-gradient(left,#a445b2,#fa4299);
+	background: #3498db;
 	border-radius: 5px;
 	transition: all 0.6s cubic-bezier(0.68,0.55,0.265,1.55);
 
@@ -96,7 +104,7 @@ input[type="radio"]{
 	margin-top:15px;
 } 
 .form-inner form .field input{
-	height: 100%;
+	height: 80%;
 	width: 95%;
 	outline: none;
 	padding-left: 15px;
@@ -109,12 +117,12 @@ input[type="radio"]{
 
 }
 .form-inner form .pass-link{
-	margin-top: 10px;
+	margin-top: 30px;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a,
 .form-inner form .login-link a{
-color: #fa4299;
+color: #3498db;
 text-decoration: none;
 }
 .form-inner form .pass-link a:hover,
@@ -128,8 +136,9 @@ text-decoration: none;
 }
 .form-inner form .login-link {
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 15px;
 }
+
 form .field input[type="submit"]{
 	color: #fff;
 	font-size:20px;
@@ -138,12 +147,16 @@ form .field input[type="submit"]{
 	border: none;
 	cursor: pointer;
 
-	background: -webkit-linear-gradient(left,#a445b2,#fa4299);
+	background: #3498db;
 
 }
 form .field input[type="submit"]:hover{
-	background: linear-gradient(170deg,#B621fe,#1fd1f9);
+	background: green;
 }
 .form-inner form .field input:focus{
-	border-color: #fc83bb;
+	border-color: #3498db;
+}
+.error_msg{
+color: #ff8471;
+
 }

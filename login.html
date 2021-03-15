@@ -9,9 +9,8 @@
 <body>
 	<div class="wrapper">
 		<div class="title-text">
-			<div class="title login">Login Form</div>
-			<div class="title signup">Signup Form</div>
-			
+			<div class="title login">Login form </div>
+			<div class="title signup">Signup form</div>	
 		</div>
 		<div class="form-container">
 			<div class="slide-controls">
@@ -20,17 +19,22 @@
 				<label for="login" class="slide login">Login</label>
 				<label for="signup" class="slide signup">Signup</label>
 				<div class="slide-tab"></div>
-				
 			</div>
+			
 			<div class="form-inner">
-				<form action="#" class="login">
+				<form action="menu.html" class="login" method="post" onsubmit="return validate();">
 					<div class="field">
-						<input type="text" name="" placeholder="Email Adress" required>
+						<input type="text" name="username" placeholder="User Name"
+						id="uname">
 					</div>
+					<div class="error_msg" id="un_err_msg"></div>
 
 					<div class="field">
-						<input type="password" name="" placeholder="Password" required>
+						<input type="password" name="password" placeholder="Password" id="password" >
 					</div>
+
+					<div class="error_msg" id="pw_err_msg"></div>
+
 					<div class="pass-link"><a href="#">Forgot My Password</a></div>
 					<div class="field">
 					<input type="submit" name="" value="Login Now">
@@ -66,6 +70,7 @@
 		
 	</div>
 	<script type="text/javascript">
+		/* toggling between login and signup */
 		const loginForm=document.querySelector("form.login");
 		const signupForm=document.querySelector("form.signup");
 		const loginBtn=document.querySelector("label.login");
@@ -94,6 +99,54 @@
 			loginBtn.click();
 			return false;
 		});
+
+		/* javascript form validation */
+		function error_message(id,message){
+			document.getElementById(id).innerText = message;
+		}
+		function validate(){
+			var username = document.getElementById("uname");
+			var password = document.getElementById("password");
+			var usernamevalue = username.value;
+			var passwordvalue = password.value;
+
+			if (usernamevalue == "") {
+				username.style.border="1px solid #ff8471";
+				error_message("un_err_msg","this field canot be empty!");
+			}
+			else if (usernamevalue.length < 5) {
+				username.style.border="1px solid #ff8471";
+				error_message("un_err_msg","please enter a valid username");
+
+			}
+			else{
+				username.style.border="1px solid #3498db";
+				error_message("un_err_msg","");
+			}
+
+			if (passwordvalue == "") {
+				password.style.border="1px solid #ff8471";
+				error_message("pw_err_msg","this field canot be empty!");
+			}
+			else if (passwordvalue.length < 6) {
+				password.style.border="1px solid #ff8471";
+				error_message("pw_err_msg","please enter a valid password");
+
+			}
+			else{
+				password.style.border="1px solid #3498db";
+				error_message("pw_err_msg","");
+
+			}
+
+			if (usernamevalue == "" || passwordvalue == "" || usernamevalue.length < 5 || passwordvalue.length < 6 ) {
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+
 	</script>
 
 </body>

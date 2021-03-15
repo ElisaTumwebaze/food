@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>view order list</title>
+	<title>Acccept and Deliclie Orders</title>
 	<link rel="stylesheet" type="text/css" href="admin.css">
 </head>
 <body>
@@ -11,16 +11,12 @@
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">about</a></li>
-			<li><a href="">Services</a></li>
-			<li><a href="">contact</a></li>
+			<li><a href="">First Food First</a></li>
 		</ul>
 	</nav>
 	<aside class="nav-sidebar">
 		<ul>
-			<li><span>Manage Orders</span> </li>
-			<li><a href="admin.html">View Order List</a></li>
+			<li><span>Dash Board</span> </li>
 			<li><a href="accept.html">Accept &amp; Decline </a></li>
 			<li><a href="editstatus.html">Edit Order Status</a></li>
 			<li><a href="login.html">Logout</a></li>
@@ -31,160 +27,192 @@
 		<div class="info">
 		<div class="order-table">	
 		<table border="1px">
-			<caption><h2>View List of Orders</h2></caption>
+			<caption><h2>Accept OR Decline Orders</h2></caption>
 			<thead>
 				
 				<th>#</th>
 				<th>Food Name</th>
 				<th>Unit Price</th>
 				<th>Quantity</th>
-				<th>Amount</th>
 				<th>UserName</th>
 				<th>Location</th>
 				<th>Phone Number</th>
+				<th colspan="2">Action</th>
 				
 			</thead>
 			<tbody>
 				<tr>
 					<td>1</td>
 					<td>Katogo</td>
-					<td>15000 UGX</td>
-					<td align="center">1</td>
 					<td>15000</td>
+					<td align="center">1</td>
 					<td>JobMigade</td>
 					<td>wandegeya</td>
 					<td>0789077905</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
 				<tr>
 					<td>2</td>
 					<td>Beans </td>
-					<td>7500 UGX</td>
+					<td>7500</td>
 					<td align="center">1</td>
-					<td>15000</td>
 					<td>RodgerMurungi</td>
 					<td>Kasubi</td>
 					<td>0775090647</td>
-				</tr>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 
 				<tr>
-					<td>3</td>
+					<td >3</td>
 					<td>Fish</td>
-					<td>5000 UGX</td>
+					<td>14000</td>
 					<td align="center">2</td>
-					<td>15000</td>
 					<td>AnorldKatumba</td>
 					<td>Lusaze</td>
 					<td>077890657</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
 				<tr>
 					<td>4</td>
 					<td>Rolex</td>
-					<td>2000 UGX</td>
+					<td>1500</td>
 					<td align="center">2</td>
-					<td>4000</td>
 					<td>ElisaTumwebaze</td>
 					<td>Kikoni</td>
 					<td>0789060642</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
-
 				<tr>
 					<td>5</td>
 					<td>Katogo</td>
-					<td>15000 UGX</td>
-					<td align="center">1</td>
 					<td>15000</td>
+					<td align="center">1</td>
 					<td>JobMigade</td>
 					<td>wandegeya</td>
 					<td>0789077905</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
 				<tr>
 					<td>6</td>
 					<td>Beans </td>
-					<td>7500 UGX</td>
+					<td>7500</td>
 					<td align="center">1</td>
-					<td>15000</td>
 					<td>RodgerMurungi</td>
 					<td>Kasubi</td>
 					<td>0775090647</td>
-				</tr>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 
 				<tr>
 					<td>7</td>
 					<td>Fish</td>
-					<td>5000 UGX</td>
+					<td>14000</td>
 					<td align="center">2</td>
-					<td>15000</td>
 					<td>AnorldKatumba</td>
 					<td>Lusaze</td>
 					<td>077890657</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
 				<tr>
 					<td>8</td>
 					<td>Rolex</td>
-					<td>2000 UGX</td>
+					<td>1500</td>
 					<td align="center">2</td>
-					<td>4000</td>
 					<td>ElisaTumwebaze</td>
 					<td>Kikoni</td>
 					<td>0789060642</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
+
 				<tr>
 					<td>9</td>
 					<td>Katogo</td>
-					<td>15000 UGX</td>
-					<td align="center">1</td>
 					<td>15000</td>
+					<td align="center">1</td>
 					<td>JobMigade</td>
 					<td>wandegeya</td>
 					<td>0789077905</td>
-				</tr>
-				<tr>
-					<td>10</td>
-					<td>Fish</td>
-					<td>5000 UGX</td>
-					<td align="center">2</td>
-					<td>15000</td>
-					<td>AnorldKatumba</td>
-					<td>Lusaze</td>
-					<td>077890657</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
 				<tr>
-					<td>11</td>
+					<td>10</td>
 					<td>Beans </td>
-					<td>7500 UGX</td>
+					<td>7500</td>
 					<td align="center">1</td>
-					<td>15000</td>
 					<td>RodgerMurungi</td>
 					<td>Kasubi</td>
 					<td>0775090647</td>
-				</tr>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 
 				<tr>
-					<td>12</td>
+					<td>11</td>
 					<td>Fish</td>
-					<td>5000 UGX</td>
+					<td>14000</td>
 					<td align="center">2</td>
-					<td>15000</td>
 					<td>AnorldKatumba</td>
 					<td>Lusaze</td>
 					<td>077890657</td>
+					<td align="center">
+						<input class="btn-success" type="submit" name="" value="Accept">
+					</td>
+					<td align="center">
+						<input class="btn-danger" type="submit" name="" value="Decline">
+					</td>
 				</tr>
 
-				<tr>
-					<td>13</td>
-					<td>Rolex</td>
-					<td>2000 UGX</td>
-					<td align="center">2</td>
-					<td>4000</td>
-					<td>ElisaTumwebaze</td>
-					<td>Kikoni</td>
-					<td>0789060642</td>
-				</tr>
 				<tfoot>
 					
 				</tfoot>
@@ -192,8 +220,9 @@
 			</tbody>
 
 		</table>
-	</div>
-	</div>
+		</div>
+		</div>
+		
 	</div>
 
 </body>

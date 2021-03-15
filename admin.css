@@ -40,11 +40,10 @@ body{
 	display: block;
 	height: 100%;
 	padding: 0 10px;
-	text-transform: uppercase;
 	text-decoration: none;
 	color: #fff;
-	font-family: arial;
-	font-size: 16px;
+	font-family: Tahoma;
+	font-size: 25px;
 	
 }.nav-main ul li a:hover {
 	
@@ -91,11 +90,11 @@ list-style: none;
 	color: #3498db;
 }
 .main-content{
-	background-color: #f98f39; 
-	margin-top: 30px;
+	background-color: #48505a; 
+	margin-top: 45px;
 	margin-left: 55px; 
 	width: calc(100vw-275px);
-	height: calc(100vh - 20px);
+	height: calc(100vh - 60px);
 	transition: all 0.5s ease-in-out;
 }
 table{
@@ -104,12 +103,22 @@ table{
 	border-radius: 5px;
 	border-collapse: collapse;
 	font-family: monospace;
-	font-size: 25px;
 
 }
-th{
-	background-color: #1b1b1b;
+table thead th {
 	color: #fff;
+	background-color: #1b1b1b;	
+	padding: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	
+}
+
+table tbody td {
+	padding: 5px;
+	font-size: 15px;
+	font-weight: normal;
 }
 .btn-success{
 	border-radius: 5px;

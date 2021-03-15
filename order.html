@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>first food first</title>
+	<link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+<body>
+
+	<nav class="nav-main">
+		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
+		<ul>
+			<li><a href="">First Food First</a></li>
+			
+		</ul>
+	</nav>
+	<aside class="nav-sidebar">
+		<ul>
+			<li><span>Dash board</span> </li>
+			<li><a href="menu.html">View food Menu</a></li>
+			<li><a href="orderfood.html">Make Order</a></li>
+			<li><a href="orderhistory.html">View Order History</a></li>
+			<li><a href="login.html">Logout</a></li>
+		</ul>
+		
+	</aside>
+	<div class="main-content">
+		<div class="info">
+		<div class="order-table">
+		<table border="1px">
+			<caption><h2>Make Order</h2></caption>
+			<thead>
+				<tr>
+				<th>#</th>
+				<th>Photo</th>
+				<th>Food Name</th>
+				<th>Unit Price</th>
+				<th>Quantity</th>
+				<th>Location</th>
+				<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td class="photo"><img src="img/chicken.jpg" width="50" height="50"></td>
+					<td>Breakfast Katogo</td>
+					<td>15000 UGX</td>
+					<td><input type="number" name="" ></td>
+					<td><input type="text" name="" placeholder="Enter Location"></td>
+					<td>
+						<a href=""><input type="submit" value="Submit Order" name="" class="btn-success"></a>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+		</div>
+		</div>
+		
+	</div>
+
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>
