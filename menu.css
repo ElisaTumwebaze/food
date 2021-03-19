@@ -97,8 +97,61 @@ list-style: none;
 	margin-top: 45px;
 	margin-left: 55px; 
 	width: calc(100vw-275px);
-	height: calc(100vh - 60px);
+	height: calc(100vh - 45px);
 	transition: all 0.5s ease-in-out;
+}
+.card-wrap{
+	position: absolute;
+	height: 500px;
+	width: 350px;
+	padding: 2px;
+	background-color: #fff;
+	border-radius:10px;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+.card-info{
+	padding: 0 20px;
+}
+.card-info h4,p{
+	font-family: tahoma;
+	font-size: 15px;
+}
+.card-info input[type="submit"]{
+	width: 200px;
+	height: 35px;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 5px;
+	border-style: none;
+	font-family: tahoma;
+	font-size: 15px;
+
+
+}
+.card-info input[type="submit"]:hover{
+	background-color:  #5cb85c;
+}
+.form-container{
+	position: absolute;
+	margin-top: 20px;
+	width: 350px;
+	height:500px; 
+	background-color: #fff;
+	margin-left: 400px;
+	border-radius:5px;
+}
+.header{
+	margin-top: 0px;
+	height: 40px;
+	width: 340px;
+	background-color: skyblue;
+	padding: 5px;
+	border-radius: 5px
+}
+.header h4{
+	font-size: 17px;
+	color: #fff;
 }
 table{
 	width: 100%;
@@ -127,14 +180,14 @@ table tbody td {
 .btn-success{
 	border-radius: 5px;
 	border: none;
-	background-color: green;
+	background-color: #00aced;
 	color: #fff;
 	height: 40px;
 	width: 100px;
 }
 .btn-success:hover{
 
-	background-color:#00aced;
+	background-color:green;
 
 }
 

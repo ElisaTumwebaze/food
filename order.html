@@ -18,8 +18,7 @@
 	<aside class="nav-sidebar">
 		<ul>
 			<li><span>Dash board</span> </li>
-			<li><a href="menu.html">View food Menu</a></li>
-			<li><a href="orderfood.html">Make Order</a></li>
+			<li><a href="menu.html">Make Order</a></li>
 			<li><a href="orderhistory.html">View Order History</a></li>
 			<li><a href="login.html">Logout</a></li>
 		</ul>
@@ -27,37 +26,27 @@
 	</aside>
 	<div class="main-content">
 		<div class="info">
-		<div class="order-table">
-		<table border="1px">
-			<caption><h2>Make Order</h2></caption>
-			<thead>
-				<tr>
-				<th>#</th>
-				<th>Photo</th>
-				<th>Food Name</th>
-				<th>Unit Price</th>
-				<th>Quantity</th>
-				<th>Location</th>
-				<th>Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td class="photo"><img src="img/chicken.jpg" width="50" height="50"></td>
-					<td>Breakfast Katogo</td>
-					<td>15000 UGX</td>
-					<td><input type="number" name="" ></td>
-					<td><input type="text" name="" placeholder="Enter Location"></td>
-					<td>
-						<a href=""><input type="submit" value="Submit Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
+			<div class="card-wrap">
+				<div class="card-image">
+					<img src="img/chicken.jpg" height="250px" width="348px">
+				</div>
+				<div class="card-info">
+				<div class="card-title">
+					<h4>Breakfast Katogo</h4>
+					
+				</div>
+				<div class="card-info">
+					<p>Price:<b>2500 UGX</b></p>
+					<p>Katogo is available in many forms</p>
+					<p>Quantity: <input type="number" name="" placeholder="Enter Quantity"></p>
+					<p>Location: <input type="text" name="" placeholder="Enter Your Location"></p>
+					<input type="submit" name="" value="Order Now">
 
-			</tbody>
-		</table>
-		</div>
-		</div>
+				</div>
+				
+			</div>
+			</div>
+			
 		
 	</div>
 

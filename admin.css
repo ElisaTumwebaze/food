@@ -91,18 +91,33 @@ list-style: none;
 }
 .main-content{
 	background-color: #48505a; 
-	margin-top: 45px;
+	margin-top: 48px;
 	margin-left: 55px; 
 	width: calc(100vw-275px);
 	height: calc(100vh - 60px);
 	transition: all 0.5s ease-in-out;
 }
+
 table{
 	width: 100%;
 	color: #fff;
 	border-radius: 5px;
 	border-collapse: collapse;
 	font-family: monospace;
+
+}
+#add{
+	background-color:#00aced;
+	border-color: none;
+	height: 40px;
+	width: 200px;
+	border-style: none;
+	border-radius:5px;
+	color: #fff; 
+
+}
+#add:hover{
+	background-color: green;
 
 }
 table thead th {
@@ -141,5 +156,94 @@ table tbody td {
 }
 .btn-danger:hover{
 background-color: #bb0000; 
+}
+#add-model{
+	display:none;
+	position: fixed;
+	top: 75px;
+	left: 600px;
+	background-color:;
+}
+#model-content{
+	background-color: #efefef;
+	margin: 35px auto;
+	box-shadow: 4px 4px 5px rgba(0,0,0,0.25);
+	animation-name: modelSlideUp;
+	animation-duration:1s;
+}
+#model-header{
+	background-color: #4586de;
+	color: #fff;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#model-header .close-model{
+	font-size: 40px;
+	float: right;
+	cursor: pointer;
+}
+#model-header .close-model:hover{
+	color: #333;
+	cursor: pointer;
+}
+.model-footer{
+	background-color:#4586de;
+	padding: 0px 25px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+#model-body{
+	padding: 5px 30px;
+}
+#model-body h3{
+	color:#4586de;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 30px; 
+}
+.form-group{
+	margin: 10px 0;
+	margin-left: 55px;
+	font-family: Tahoma;
+}
+.form-group label{
+	display: block;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-family: Tahoma;
+
+}
+.form-group input{
+	width: 80%;
+	border-radius: 5px;
+	padding: 10px 10px;
+	font-size: 15px;
+}
+#btn-add{
+	margin-bottom: 10px;
+	width: 75%;
+	margin-left: 55px;
+	transition: background 0.3s;
+	border-radius: 5px;
+	height: 40px;
+	border-style: none;
+	background-color:#4586de;
+	color: #fff;
+	font-size: 20px; 
+}
+#btn-add:hover{
+background-color:#00aced;
+}
+@keyframes modelSlideUp {
+	0%{
+	transform: translateY(1500px);
+
+	}
+
+	100%{
+		transform: translateY(0);
+	}
 }
 

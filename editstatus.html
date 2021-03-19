@@ -11,7 +11,7 @@
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">Firs Food First</a></li>
+			<li><a href="">First Food First</a></li>
 		</ul>
 	</nav>
 	<aside class="nav-sidebar">
@@ -24,10 +24,11 @@
 		
 	</aside>
 	<div class="main-content">
-		<div class="info">
 		<div class="order-table">	
 		<table border="1px">
-			<caption><h2>Edit Order Status</h2></caption>
+			<caption><h2>Edit Order Status 
+				<input type="submit" name="" value="Add Item" id="add">
+			</h2></caption>
 			<thead>
 				
 				<th>#</th>
@@ -133,6 +134,35 @@
 
 		</table>
 	</div>
+	<div id="add-model" class="model">
+		<div id="model-content">
+			<div id="model-header">
+				<span class="close-model">&times;</span>
+				<h2>Add item form</h2>
+			</div>
+			<div id="model-body">
+				<h3>Please fill the Form bellow</h3>
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="food-name">Food Name</label>
+					<input type="text" name="" placeholder="Enter food Name">	
+				</div>
+				<div class="form-group">
+					<label for="price">Unit Price</label>
+					<input type="Number" name="" placeholder="Enter Unit Price">	
+				</div>
+				<div class="form-group">
+					<label for="photo">Upload Photo</label>
+					<input type="file" name="" >	
+				</div>
+				<input type="submit" name="" value="Add food item" id="btn-add">
+			</form>
+			<div class="model-footer">
+				<h3>First food first &copy;2021</h3>	
+			</div>
+			
+		</div>
 	</div>
 	</div>
 
