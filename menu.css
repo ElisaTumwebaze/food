@@ -36,6 +36,7 @@ body{
 	
 	
 }
+
 .nav-main ul li a {
 	display: block;
 	height: 100%;
@@ -46,7 +47,8 @@ body{
 	font-family: arial;
 	font-size: 16px;
 	
-}.nav-main ul li a:hover {
+}
+.nav-main ul li a:hover {
 	
 	color: #3498db;
 	
@@ -91,35 +93,103 @@ list-style: none;
 	color: #3498db;
 }
 .main-content{
-	background-color: #f98f39; 
-	margin-top: 65px;
-	margin-left: 55px;
+	background-color: #48505a; 
+	margin-top: 45px;
+	margin-left: 55px; 
 	width: calc(100vw-275px);
-	height: calc(240vh - 60px);
+	height: calc(100vh - 45px);
 	transition: all 0.5s ease-in-out;
 }
-.main-content .header h2{
-	font-family: arial;
-	text-transform: uppercase;
-	color: #fff;
-	text-align: center;
+.card-wrap{
+	position: absolute;
+	height: 500px;
+	width: 350px;
+	padding: 2px;
+	background-color: #fff;
+	border-radius:10px;
+	margin-top: 20px;
+	margin-left: 5px;
 }
+.card-info{
+	padding: 0 20px;
+}
+.card-info h4,p{
+	font-family: tahoma;
+	font-size: 15px;
+}
+.card-info input[type="submit"]{
+	width: 200px;
+	height: 35px;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 5px;
+	border-style: none;
+	font-family: tahoma;
+	font-size: 15px;
 
 
+}
+.card-info input[type="submit"]:hover{
+	background-color:  #5cb85c;
+}
+.form-container{
+	position: absolute;
+	margin-top: 20px;
+	width: 350px;
+	height:500px; 
+	background-color: #fff;
+	margin-left: 400px;
+	border-radius:5px;
+}
+.header{
+	margin-top: 0px;
+	height: 40px;
+	width: 340px;
+	background-color: skyblue;
+	padding: 5px;
+	border-radius: 5px
+}
+.header h4{
+	font-size: 17px;
+	color: #fff;
+}
 table{
 	width: 100%;
 	color: #fff;
 	border-radius: 5px;
 	border-collapse: collapse;
 	font-family: monospace;
-	font-size: 25px;
 
 }
-th{
-	background-color: #1b1b1b;
+table thead th {
 	color: #fff;
+	background-color: #1b1b1b;	
+	padding: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	
 }
 
+table tbody td {
+	padding: 5px;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.btn-success{
+	border-radius: 5px;
+	border: none;
+	background-color: #00aced;
+	color: #fff;
+	height: 40px;
+	width: 100px;
+}
+.btn-success:hover{
+
+	background-color:green;
+
+}
 
 
 

@@ -33,3 +33,15 @@ let toggleNav=function(){
 		getSidebarUl.style.visibility="hidden";
 	}
 }
+
+let model=document.getElementById('add-model'),
+	openModel=document.getElementById('add'),
+	closeModel=document.querySelector('.close-model');
+
+	openModel.addEventListener('click',function(){
+		model.style.display="block";
+	})
+
+	closeModel.addEventListener('click',function(){
+		model.style.display="none";
+	})

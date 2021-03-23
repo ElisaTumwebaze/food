@@ -90,19 +90,17 @@ list-style: none;
 	
 	color: #3498db;
 }
+.nav-sidebar ul li a:hover{
+	
+	color: #3498db;
+}
 .main-content{
-	background-color: #f98f39; 
-	margin-top: 65px;
-	margin-left: 55px;
+	background-color: #48505a; 
+	margin-top: 45px;
+	margin-left: 55px; 
 	width: calc(100vw-275px);
 	height: calc(100vh - 60px);
 	transition: all 0.5s ease-in-out;
-}
-.main-content .header h2{
-	font-family: arial;
-	text-transform: uppercase;
-	color: #fff;
-	text-align: center;
 }
 table{
 	width: 100%;
@@ -110,14 +108,23 @@ table{
 	border-radius: 5px;
 	border-collapse: collapse;
 	font-family: monospace;
-	font-size: 25px;
 
 }
-th{
-	background-color: #1b1b1b;
+table thead th {
 	color: #fff;
+	background-color: #1b1b1b;	
+	padding: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	
 }
 
+table tbody td {
+	padding: 5px;
+	font-size: 15px;
+	font-weight: normal;
+}
 
 
 
