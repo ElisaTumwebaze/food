@@ -17,7 +17,7 @@ body{
 	width: 60px;
 	height: 100%;
 	background-color: #f98f39;
-	background-image: url("img/menu.png");
+	background-image: url("../img/menu.png");
 	background-repeat:no-repeat;
 	background-size: 50%;
 	background-position: center;
@@ -79,11 +79,19 @@ list-style: none;
 	text-transform: uppercase;
 	color: #fff;
 	font-family: arial;
-	font-size: 16px;
+	font-size: 14px;
 	white-space: nowrap;
 	opacity: 0;
 	transition: all 0.5s ease-in-out;
 
+}
+.nav-sidebar ul li a .fa{
+	color: #f98f39;
+	margin-right : 10px ;
+	font-size: 25px;
+	visibility: visible;
+	margin-left: -40px;
+	
 }
 .nav-sidebar ul li a:hover{
 	

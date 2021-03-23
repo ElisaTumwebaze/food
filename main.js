@@ -4,7 +4,7 @@ let toggleNav=function(){
 	let getSidebarUl=document.querySelector(".nav-sidebar ul");
 	let getSidebarTitle=document.querySelector(".nav-sidebar span");
 	let getSidebarLinks=document.querySelectorAll(".nav-sidebar a");
-	let getMainContent=document.querySelector(".main-content")
+	let getMainContent=document.querySelector(".main-content");
 
 	if (toggleNavStatus===false) {
 		getSidebarUl.style.visibility="visible";
@@ -24,6 +24,7 @@ let toggleNav=function(){
 		getSidebar.style.width="50px";
 		getMainContent.style.marginLeft="55px";
 		getSidebarTitle.style.opacity="0";
+		
 
 		let arrayLength=getSidebarLinks.length;
 		for (let i = 0; i < arrayLength; i++) {
@@ -31,6 +32,7 @@ let toggleNav=function(){
 		}
 		toggleNavStatus = false;
 		getSidebarUl.style.visibility="hidden";
+		
 	}
 }
 

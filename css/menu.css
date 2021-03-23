@@ -17,7 +17,7 @@ body{
 	width: 60px;
 	height: 100%;
 	background-color: #f98f39;
-	background-image: url("img/menu.png");
+	background-image: url("../img/menu.png");
 	background-repeat:no-repeat;
 	background-size: 50%;
 	background-position: center;
@@ -88,9 +88,18 @@ list-style: none;
 	transition: all 0.5s ease-in-out;
 
 }
+
 .nav-sidebar ul li a:hover{
 	
 	color: #3498db;
+}
+.nav-sidebar ul li a .fa{
+	color: #f98f39;
+	margin-right : 10px ;
+	font-size: 25px;
+	visibility: visible;
+	margin-left: -40px;
+	
 }
 .main-content{
 	background-color: #48505a; 
@@ -132,7 +141,26 @@ list-style: none;
 .card-info input[type="submit"]:hover{
 	background-color:  #5cb85c;
 }
-
+.form-container{
+	position: absolute;
+	margin-top: 20px;
+	width: 350px;
+	height:500px; 
+	background-color: #fff;
+	margin-left: 400px;
+	border-radius:5px;
+}
+.header{
+	margin-top: 0px;
+	height: 40px;
+	width: 340px;
+	background-color: skyblue;
+	padding: 5px;
+	border-radius: 5px
+}
+.header h4{
+	font-size: 17px;
+	color: #fff;
 }
 table{
 	width: 100%;
