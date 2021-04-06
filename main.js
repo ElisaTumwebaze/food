@@ -1,21 +1,15 @@
-let toggleNavStatus=false;
+let toggleNavStatus=true;
 let toggleNav=function(){
 	let getSidebar=document.querySelector(".nav-sidebar");
 	let getSidebarUl=document.querySelector(".nav-sidebar ul");
-	let getSidebarTitle=document.querySelector(".nav-sidebar span");
 	let getSidebarLinks=document.querySelectorAll(".nav-sidebar a");
 	let getMainContent=document.querySelector(".main-content");
+	let getNavIcons=document.querySelector(".nav-sidebar ul li a .fa");
 
 	if (toggleNavStatus===false) {
 		getSidebarUl.style.visibility="visible";
 		getSidebar.style.width="272px";
 		getMainContent.style.marginLeft="275px";
-		getSidebarTitle.style.opacity="0.5";
-
-		let arrayLength=getSidebarLinks.length;
-		for (let i = 0; i < arrayLength; i++) {
-			getSidebarLinks[i].style.opacity = "1";
-		}
 		toggleNavStatus = true;
 	}
 
@@ -23,13 +17,9 @@ let toggleNav=function(){
 		
 		getSidebar.style.width="50px";
 		getMainContent.style.marginLeft="55px";
-		getSidebarTitle.style.opacity="0";
-		
+		getNavIcons.style.visible="visible";
 
-		let arrayLength=getSidebarLinks.length;
-		for (let i = 0; i < arrayLength; i++) {
-			getSidebarLinks[i].style.opacity = "0";
-		}
+		
 		toggleNavStatus = false;
 		getSidebarUl.style.visibility="hidden";
 		
