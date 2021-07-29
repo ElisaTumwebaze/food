@@ -24,7 +24,7 @@
 			</div>
 			
 			<div class="form-inner">
-				<form action="menu.html" class="login" onsubmit="return validate();">
+				<form class="login" id="login-form">
 					<div class="field">
 						<input type="text" name="username" placeholder="User Name"
 						id="uname">
@@ -36,30 +36,25 @@
 					</div>
 
 					<div class="error_msg" id="pw_err_msg"></div>
-
-					<div class="pass-link"><a href="#">Forgot My Password</a></div>
 					<div class="field">
 					<input type="submit" name="" value="Login Now">
 					</div>
+					<div id="err_div"></div>
 					<div class="signup-link">Don't have an Account <a href="#">Signup Now</a></div>
 					
 				</form>
 
-				<form action="#" class="signup">
+				<form  class="signup" id="signup-form">
 					<div class="field">
-						<input type="text" name="" placeholder="User Name" required>
+						<input type="text" name="username" placeholder="User Name" required>
 					</div>
 					<div class="field">
-						<input type="email" name="" placeholder="Email Adress" required>
-					</div>
-
-					<div class="field">
-						<input type="password" name="" placeholder="Password" required>
-					</div>
-					<div class="field">
-						<input type="password" name="" placeholder="confirm password" required>
+						<input type="email" name="email" placeholder="Email Adress" required>
 					</div>
 
+					<div class="field">
+						<input type="password" name="password" placeholder="Password" required>
+					</div>
 					
 					<div class="field">
 					<input type="submit" name="" value="Signup Now">
@@ -68,88 +63,10 @@
 				</form>
 				
 			</div>
-		</div>
-		
+		</div>	
 	</div>
-	<script type="text/javascript">
-		/* toggling between login and signup */
-		const loginForm=document.querySelector("form.login");
-		const signupForm=document.querySelector("form.signup");
-		const loginBtn=document.querySelector("label.login");
-		const signupBtn=document.querySelector("label.signup");
-		const signupLink=document.querySelector(".signup-link a");
-		const loginLink=document.querySelector(".login-link a");
-		const loginText=document.querySelector(".title-text .login"); 
-		const signupText=document.querySelector(".title-text .signup");
-
-		signupBtn.onclick=(()=>{
-			loginForm.style.marginLeft="-50%";
-			loginText.style.marginLeft="-50%";
-
-		});
-		loginBtn.onclick=(()=>{
-			loginForm.style.marginLeft="0%";
-			loginText.style.marginLeft="0%";
-
-
-		});
-		signupLink.onclick=(()=>{
-			signupBtn.click();
-			return false;
-		});
-		loginLink.onclick=(()=>{
-			loginBtn.click();
-			return false;
-		});
-
-		/* javascript form validation */
-		function error_message(id,message){
-			document.getElementById(id).innerText = message;
-		}
-		function validate(){
-			var username = document.getElementById("uname");
-			var password = document.getElementById("password");
-			var usernamevalue = username.value;
-			var passwordvalue = password.value;
-
-			if (usernamevalue == "") {
-				username.style.border="1px solid #ff8471";
-				error_message("un_err_msg","this field canot be empty!");
-			}
-			else if (usernamevalue.length < 5) {
-				username.style.border="1px solid #ff8471";
-				error_message("un_err_msg","please enter a valid username");
-
-			}
-			else{
-				username.style.border="1px solid #3498db";
-				error_message("un_err_msg","");
-			}
-
-			if (passwordvalue == "") {
-				password.style.border="1px solid #ff8471";
-				error_message("pw_err_msg","this field canot be empty!");
-			}
-			else if (passwordvalue.length < 6) {
-				password.style.border="1px solid #ff8471";
-				error_message("pw_err_msg","please enter a valid password");
-
-			}
-			else{
-				password.style.border="1px solid #3498db";
-				error_message("pw_err_msg","");
-
-			}
-
-			if (usernamevalue == "" || passwordvalue == "" || usernamevalue.length < 5 || passwordvalue.length < 6 ) {
-				return false;
-			}
-			else{
-				return true;
-			}
-		}
-
-	</script>
-
-</body>
+</body>	
+<script type="text/javascript" src="./js/indexForm.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+<script type="text/javascript" src="./js/signup.js"></script>
 </html>
