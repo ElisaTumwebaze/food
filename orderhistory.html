@@ -3,17 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>first food first order history </title>
+	<title>fast food fast order history </title>
 	<link rel="stylesheet" type="text/css" href="css/history.css">
 	<!--font icons -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
 <body>
-
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">First Food First</a></li>
+			<li><a href="">Fast-Food-Fast</a></li>
 		</ul>
 	</nav>
 	<aside class="nav-sidebar">
@@ -23,80 +22,28 @@
 			<li><a href="orderhistory.html"> <i class="fa fa-map"></i> View Order History</a></li>
 			<li><a href="index.html"><i class="fa fa-user"></i> Logout</a></li>
 		</ul>
-		
 	</aside>
 	<div class="main-content">
 		<div class="info">
-			<div class="order-table">	
-		<table border="1px">
-			<caption><h2>View Order History</h2></caption>
+		<div class="order-table">	
+		<table border="1px" id="orders-table">
+			<caption><h2>Your Order History</h2></caption>
 			<thead>
-				
-				<th>#</th>
-				<th>Photo</th>
+				<th>ID</th>
 				<th>Food Name</th>
 				<th>Unit Price</th>
 				<th>Quantity</th>
 				<th>Amount</th>
-				<th>status</th>
-				
+				<th>status</th>	
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
-					<td class="photo"><img src="img/chicken.jpg" width="80" height="80"></td>
-					<td>Breakfast Katogo</td>
-					<td>15000 UGX</td>
-					<td align="center">1</td>
-					<td>15000</td>
-					<td>Processing</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td><img src="img/bean.jpg" width="80" height="80"></td>
-					<td>Flied Beans with all Foods</td>
-					<td>7500 UGX</td>
-					<td align="center">1</td>
-					<td>7500</td>
-					<td>Cancled</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td><img src="img/fish.jpg" width="80" height="80"></td>
-					<td>Fish with All foods</td>
-					<td>5000 UGX</td>
-					<td align="center">2</td>
-					<td>1000</td>
-					<td>complete</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td><img src="img/rolex.jpg" width="80" height="80"></td>
-					<td>African Rolex</td>
-					<td>2000 UGX</td>
-					<td align="center">2</td>
-					<td>4000</td>
-					<td style="font-color:red;">processing</td>
-				</tr>
-				<tr>
-					<td colspan="2"></td>
-					<td>Name:Tumwebaze Elisa</td>
-					<td colspan="2" align="center">Total</td>
-					<td>36500</td>
-					<td></td>
-				</tr>
-
+				
 			</tbody>
-
 		</table>
 		</div>
-		</div>
-		
+		</div>		
 	</div>
-
 </body>
 <script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/client_history.js"></script>
 </html>

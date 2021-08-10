@@ -63,7 +63,7 @@ body{
 }
 .nav-sidebar ul{
 	padding-top: 15px;
-	overflow: ;
+	overflow: hidden;
 	visibility: visible;
 
 }
@@ -128,8 +128,6 @@ table{
 	font-family: monospace;
 
 }
-
-}
 table thead th {
 	color: #fff;
 	background-color: #1b1b1b;	
@@ -145,12 +143,66 @@ table tbody td {
 	font-size: 15px;
 	font-weight: normal;
 }
-.btn-success{
-	border-radius: 5px;
-	border: none;
-	background-color: green;
+table tbody td .fa-check-circle{
+	color:#3498db;
+	font-size: 25px;
+	visibility: visible;
+}
+table tbody td .fa-check-circle:hover{
+	color:lightblue;
+}
+table tbody td .fa-times-circle{
+	color:#f98f39;
+	font-size: 25px;
+	visibility: visible;
+}
+table tbody td .fa-times-circle:hover{
+	color:#ff1100
+}
+table tbody td .fa-edit{
+	color:#f98f39;
+	font-size: 25px;
+	visibility: visible;
+}
+table tbody td .fa-trash-o{
+	color:#f98f39;
+	font-size: 25px;
+	visibility: visible;
+}
+table tbody .fa-trash-o:hover{
+	color:#ff1100
+}
+table tbody td .fa-edit:hover{
+	color:#3498db;
+	font-size: 25px;
+	visibility: visible;
+}
+.btn-primary{
 	color: #fff;
-	height: 25px;
+	height: 35px;
+	width: 90px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #3498db;
+	transition: background 0.3s;
+	border-style: none;
+
+}
+.btn-primary:hover{
+	background: #10ac4c;
+
+}
+.btn-success{
+	color: #fff;
+	height: 30px;
+	width: 90px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #10ac4c;
+	transition: background 0.3s;
+	border-style: none;
 }
 .btn-success:hover{
 
@@ -158,21 +210,79 @@ table tbody td {
 
 }
 .btn-danger{
-	border-radius: 5px;
-	border: none;
-	background-color:red;
 	color: #fff;
-	height: 25px;
+	height: 30px;
+	width: 90px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: red;
+	transition: background 0.3s;
+	border-style: none;
 }
 .btn-danger:hover{
 background-color: #bb0000; 
 }
+#edit-modal{
+	display: none;
+	position: fixed;
+	background-color: #fff;
+	top: 70px;
+	left: 550px;
+	height: 120px;
+	border-radius: 5px;
+	padding: 4px;
+}
+#edit-modal .fa-window-close{
+	font-size: 20px;
+	float: right;
+	cursor: pointer;
+	display: block;
+	color: #bb0000;
+}
+#edit-modal .fa-window-close:hover{
+	color: #48505a;
+}
+
+#oder-id{
+	display: block;
+	margin-left: 35px;
+	color: #000;
+}
+#edit-modal .modal-content{
+	margin-top: 10px;
+}
+#edit-modal .select-div{
+	margin-bottom: 10px;
+}
+#editBtn{
+	margin-left: 20px;
+	color: #fff;
+	height: 30px;
+	width: 100px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #f98f39;
+	transition: background 0.3s;
+	border-style: none;
+}
+#editBtn:hover{
+	background: #00aced;
+}
+#status{
+	border-radius: 5px;
+	padding: 5px 5px;
+	font-size: 14px;
+	border: 2px solid #48505a;
+	outline: none;
+}
+
 #add-model{
 	display:none;
 	position: fixed;
 	top: 70px;
-	left: 550px;
-	background-color:;
+	left: 520px;
 }
 #model-content{
 	font-family: Tahoma;
@@ -180,8 +290,13 @@ background-color: #bb0000;
 	margin: 35px auto;
 	box-shadow: 4px 4px 5px rgba(0,0,0,0.25);
 	animation-name: modelSlideUp;
-	animation-duration:1s;
+	animation-duration:0.5s;
 }
+#add-food-form .err-msg{
+	display: block;
+	color: red;
+}
+
 #model-header{
 	height: 50px;
 	background-color: #f98f39;
@@ -220,11 +335,13 @@ background-color: #bb0000;
 	color: #fff;
 
 }
-.form-group input{
+.form-group input[type='text'],[type = 'number']{
 	width: 80%;
 	border-radius: 5px;
 	padding: 10px 10px;
 	font-size: 15px;
+	border: 2px solid #6c5ce7;
+	outline: none;
 }
 .form-group input[type='file']{
 	padding: 10px 10px;
@@ -249,6 +366,7 @@ input[type=file]::file-selector-button {
 	height: 40px;
 	width: 200px;
 	margin-left: 55px;
+	margin-bottom: 5px;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
@@ -260,12 +378,166 @@ input[type=file]::file-selector-button {
 	background-color:#f98f39;
 	opacity: 0.8; 
 }
+#res-div{
+	margin-left: 85px;
+	margin-top: 15px;
+	color: #f98f39;
+}
+#edit-menu-modal{
+	display:none;
+	position: fixed;
+	top: 70px;
+	left: 520px;
+}
+#modalContent{
+	font-family: Tahoma;
+	background-color: #1b1b1b;
+	margin: 35px auto;
+	box-shadow: 4px 4px 5px rgba(0,0,0,0.25);
+	animation-name: modelSlideUp;
+	animation-duration:0.5s;
+}
+#header-section{
+	height: 50px;
+	background-color: #f98f39;
+	color: #fff;
+	padding: 0px 5px;
+	text-align: center;
+	
+}
+#header-section .close-modal{
+	font-size: 40px;
+	float: right;
+	cursor: pointer;
+}
+#header-section .close-modal:hover{
+	color: #333;
+	cursor: pointer;
+}
+.modal-footer{
+	height: 30px;
+	background-color:#f98f39;
+	padding: 0px 25px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+#edit-food-btn{
+	color: #fff;
+	font-size:15px;
+	height: 40px;
+	width: 200px;
+	margin-left: 55px;
+	margin-bottom: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #48505a;
+	transition: background 0.3s;
+	border-style: none;
+
+}
+#edit-food-btn:hover{
+	cursor: pointer;
+	background-color:#f98f39;
+	opacity: 0.8;
+}
+#fn-err{
+	display: block;
+	color: #ff0000;
+}
+#fp-err{
+	display: block;
+	color: #ff0000;
+}
+.delete-waring-modal{
+	display: none;
+	border-radius: 5px;
+	position: fixed;
+	font-family: Tahoma;
+	background-color: #fff;
+	top: 70px;
+	left: 520px;
+	padding: 0px 10px 10px 10px;
+
+}
+.delete-waring-modal p{
+	color: red;
+}
+.delete-waring-modal span{
+	font-size: 25px;
+	color: #48505a;
+	float: right;
+	cursor: pointer;
+}
+ span:hover{
+	color: #ff0000;
+		
+}
+.warning-modal-footer{
+	padding-left: 185px;
+}
+#btn-delete-food{
+	color: #fff;
+	height: 30px;
+	width: 100px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #3498db;
+	transition: background 0.3s;
+	border-style: none;
+}
+#btn-delete-food:hover{
+	background: #10ac4c;
+}
+#btn-cancel{
+	color: #fff;
+	height: 30px;
+	width: 50px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #48505a;
+	transition: background 0.3s;
+	border-style: none;
+}
+#btn-cancel:hover{
+	background:  #f80303;
+}
+#delete-order-btn{
+	color: #fff;
+	height: 30px;
+	width: 100px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #3498db;
+	transition: background 0.3s;
+	border-style: none;
+}
+#delete-order-btn:hover{
+	background: #10ac4c;
+}
+#cancel-delete-btn{
+	color: #fff;
+	height: 30px;
+	width: 50px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #48505a;
+	transition: background 0.3s;
+	border-style: none;
+}
+#cancel-delete-btn:hover{
+	background:  #f80303;
+}
+
 @keyframes modelSlideUp {
 	0%{
 	transform: translateY(1500px);
-
 	}
-
 	100%{
 		transform: translateY(0);
 	}

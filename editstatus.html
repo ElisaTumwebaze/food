@@ -3,110 +3,87 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Edit Status</title>
+	<title> fast food fast Edit Status</title>
 	<link rel="stylesheet" type="text/css" href="./css/admin.css">
 	<!--font icons -->
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
 </head>
 <body>
-
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">First Food First</a></li>
+			<li><a href="">Fast-Food-fast</a></li>
 		</ul>
 	</nav>
 	<aside class="nav-sidebar">
 		<ul>
 			<li><span><i class="fa fa-home"></i> Dash Board</span> </li>
-			<li><a href="accept.html"><i class="fa fa-check-circle"></i></i> Accept &amp; Decline </a></li>
-			<li ><a id="add"><i class="fa fa-plus-circle" id="add"></i>Add Food Item</a></li>
 			<li><a href="editmenu.html"><i class="fa fa-edit"></i>Edit menu</a></li>
 			<li><a href="editstatus.html"><i class="fa fa-wrench"></i>
 			Edit Order Status</a></li>
 			<li><a href="adminorder.html"><i class="fa fa-shopping-cart"></i>  Make order</a></li>
+			<li><a href="adminHistory.html"> <i class="fa fa-map"></i> View Order History</a></li>
 			<li><a href="index.html"><i class="fa fa-user"></i> Logout</a></li>
-		</ul>
-		
+		</ul>	
 	</aside>
+	<!--main content starts here-->
 	<div class="main-content">
 		<div class="order-table">	
-		<table border="1px">
-			<caption><h2> Edit Order Status</h2></caption>
+		<table border="1px" id="edit-status-table">
+			<caption><h2> Edit status Or Delete Orders</h2></caption>
 			<thead>
-				
-				<th>#</th>
+				<th>ID</th>
 				<th>Food Name</th>
 				<th>Unit Price</th>
 				<th>Quantity</th>
-				<th>UserName</th>
-				<th>Location</th>
-				<th>Phone Number</th>
-				<th>Choose Status</th>
-				<th>Edit order Status</th>
+				<th>Loation</th>
+				<th>Order Status</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</thead>
-			<tbody>
-
-				<tr>
-					<form action="" method="">
-						<td>4</td>
-						<td>Rolex</td>
-						<td>2000</td>
-						<td align="center">2</td>
-						<td>ElisaTumwebaze</td>
-						<td>Kikoni</td>
-						<td>0789060642</td>
-						<td>
-							<select name="">
-							<option selected hidden value="">Select Status</option>
-							<option value="complete">complete</option>
-							<option value="processing">processing</option>
-							</select>
-									
-						</td>
-						<td>
-							<button class="btn-success">Edit Status</button> 
-						</td>
-					</form>
-				</tr>
-
-				<tfoot>
-					
-				</tfoot>
-
+			<tbody id="tbody">
+				
 			</tbody>
-
 		</table>
 	</div>
-	<div id="add-model" class="model">
-		<div id="model-content">
-			<div id="model-header">
-				<span class="close-model">&times;</span>
-				<h2>Add item form</h2>
-			</div>
-			<form>
-				<div class="form-group">
-					<label for="food-name">Food Name</label>
-					<input type="text" name="" placeholder="Enter food Name">	
+	<!--Edit status modal-->
+	<div class="modal-wrapper" id="edit-modal">
+		<div class="modal-head">
+			<i class="fa fa-window-close" id="close-icon"></i>
+			<span id="oder-id"></span>	
+		</div>
+		<div class="modal-content">
+			<form action="" id="edit-status-form">
+				<div class="select-div">
+					<select id="status">
+						<option value="" value="" selected hidden>Select order status</option>
+						<option value="processing">processing</option>
+						<option value="complete">complete</option>
+						<option value="cancelled">cancelled</option>	
+					</select>
 				</div>
-				<div class="form-group">
-					<label for="price">Unit Price</label>
-					<input type="Number" name="" placeholder="Enter Unit Price">	
+				<div class="bnt-div">
+					<button type="submit" id="editBtn">Edit Status</button>
+					<span id="msg"></span>
 				</div>
-				<div class="form-group">
-					<label for="photo">Upload Photo</label>
-					<input type="file" name="" >	
-				</div>
-				<input type="submit" name="" value="Add food item" id="btn-add">
 			</form>
-			<div class="model-footer">
-				<h3>First food first &copy;2021</h3>	
-			</div>
-			
+		</div>
+	</div>
+	<!--Delete order warning modal-->
+	<div class="delete-waring-modal" id="delete-order-warning">
+		<span id="close-warning-icon">&times;</span>
+		<h3>Delete Oder Warning</h3>
+		<hr>
+		<p class="warning">Are you sure you want to delete this Order?</p>
+		<hr>
+		<div class="warning-modal-footer">
+			<button id="cancel-delete-btn">No</button>
+			<button id="delete-order-btn">Yes!! Delete it</button>
 		</div>
 	</div>
 	</div>
-
 </body>
 <script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/edit_order_status.js"></script>
+<script type="text/javascript" src="./js/delete-order.js"></script>
 </html>

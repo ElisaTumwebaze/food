@@ -3,110 +3,76 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>first food first</title>
+	<title>fast food fast</title>
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<!--font icons -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
 <body>
-
+	<!--top menubar-->
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">First Food First</a></li>
-			
+			<li><a href="">Fast-Food-Fast</a></li>	
 		</ul>
 	</nav>
+	<!--side menu bar-->
 	<aside class="nav-sidebar">
 		<ul>
 			<li><span><i class="fa fa-home"></i> Dash board</span> </li>
 			<li><a href="menu.html"><i class="fa fa-shopping-cart"></i>  Make order</a></li>
 			<li><a href="orderhistory.html"> <i class="fa fa-map"></i> View Order History</a></li>
 			<li><a href="index.html"><i class="fa fa-user"></i> Logout</a></li>
-		</ul>
-		
+		</ul>	
 	</aside>
+	<!--Main content-->
 	<div class="main-content">
 		<div class="info">
 		<div class="order-table">
-		<table border="1px">
-			<caption><h2>First Food First Menu</h2></caption>
+		<table border="1px" id="item-table">
+			<caption><h2>Fast-Food-Fast Menu</h2></caption>
 			<thead>
 				<tr>
-				<th>#</th>
-				<th>Photo</th>
+				<th>ID</th>
+				<th>photo</th>
 				<th>Food Name</th>
 				<th>Unit Price</th>
-				<th>Action</th>
+				<th>Make Order</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td class="photo"><img src="img/chicken.jpg" width="50" height="50"></td>
-					<td>Breakfast Katogo</td>
-					<td>15000 UGX</td>
-					<td>
-						<a href="order.html"><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td><img src="img/bean.jpg" width="50" height="50"></td>
-					<td>Flied Beans with all Foods</td>
-					<td>7500 UGX</td>
-					<td>
-						<a href=""><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td><img src="img/fish.jpg" width="50" height="50"></td>
-					<td>Fish with All foods</td>
-					<td>5000 UGX</td>
-					<td>
-						<a href=""><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td><img src="img/rolex.jpg" width="50" height="50"></td>
-					<td>African Rolex</td>
-					<td>12000 UGX</td>
-					<td>
-						<a href=""><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td><img src="img/meat.jpg" width="50" height="50"></td>
-					<td>Meat with all foods</td>
-					<td>2500 UGX</td>
-					<td>
-						<a href=""><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td><img src="img/chips.jpg" width="50" height="50"></td>
-					<td>Chips and Chiken</td>
-					<td>12000 UGX</td>
-					<td>
-						<a href=""><input type="submit" value="Order" name="" class="btn-success"></a>
-					</td>
-				</tr>
-
+			<tbody id="item-body">
+			
 			</tbody>
 		</table>
 		</div>
 		</div>
-		
+		<!--order Modal form section-->
+		<div class="modal-wrapper" id="order-modal">
+			<div id="modal-title">
+				<i class="fa fa-window-close" id="close-icon"></i>
+				<h2 class="form-title">Order Form</h2>
+			</div>
+			<div class="modal-info">
+				<p class="item-info" id="item-name"></p>
+				<p class="item-info" id="item-price"></p>
+				<form method="" id="order-form">
+					<div class="form-group">
+						<label for="quantity">Quantity</label>	
+						<input type="number" id="quantity" placeholder="Enter Quantity">
+						<span class="err-message" id="qty-err"></span>
+					</div>
+					<div class="form-group">
+						<label for="location">Location</label>
+						<input type="text" id="location" placeholder="Enter Your Location">
+						<span class="err-message" id="location-err"></span>
+					</div>
+					<input type="submit" id="make-order-btn" value="Order Now">
+					<span class="res-message" id="res-msg"></span>
+				</form>	
+			</div>	
+		</div>	
 	</div>
-
 </body>
 <script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/make_order.js"></script>
 </html>
