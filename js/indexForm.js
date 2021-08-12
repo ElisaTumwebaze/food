@@ -12,7 +12,6 @@ const signupText=document.querySelector(".title-text .signup");
 signupBtn.onclick=(()=>{
     loginForm.style.marginLeft="-50%";
     loginText.style.marginLeft="-50%";
-
 });
 loginBtn.onclick=(()=>{
     loginForm.style.marginLeft="0%";

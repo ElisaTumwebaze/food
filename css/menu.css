@@ -82,7 +82,7 @@ list-style: none;
 	text-transform: uppercase;
 	color: #fff;
 	font-family: arial;
-	font-size: 16px;
+	font-size: 14px;
 	white-space: nowrap;
 	opacity: 1;
 	transition: all 0.5s ease-in-out;
@@ -116,6 +116,7 @@ list-style: none;
 	
 }
 .main-content{
+	display: block;
 	background-color: #48505a; 
 	margin-top: 45px;
 	margin-left: 275px; 
@@ -123,58 +124,83 @@ list-style: none;
 	height: calc(100vh - 45px);
 	transition: all 0.5s ease-in-out;
 }
-.card-wrap{
-	position: absolute;
-	height: 500px;
-	width: 350px;
-	padding: 2px;
-	background-color: #fff;
-	border-radius:10px;
-	margin-top: 20px;
-	margin-left: 5px;
+.modal-wrapper{
+	display:none;
+	position: fixed;
+	top: 70px;
+	left: 300px;
+	width: 300px;
+	height: 400px;
+	border-radius: 10px;
+	background-color:#fff;
 }
-.card-info{
-	padding: 0 20px;
+
+#modal-title{
+	height: 50px;
+	padding: 0px 5px;
 }
-.card-info h4,p{
-	font-family: tahoma;
-	font-size: 15px;
+.form-title{
+	font-size: 25px;
+	font-weight: 600;
+	text-align: center;
+	font-family: Tahoma;
+	color: #f98f39;
 }
-.card-info input[type="submit"]{
-	width: 200px;
-	height: 35px;
-	background-color: #3498db;
-	color: #fff;
+.fa-window-close{
+	color: #ff0000;
+	float: right ;
+	font-size: 25px;
+	visibility: visible;
+	
+}
+.fa-window-close:hover{
+	color: #333;
+}
+.modal-info{
+	padding: 0 50px;
+}
+.item-info{
+	font-size: 16px;
+	font-family: Tahoma;
+	color: #00aced;;
+}
+.form-group label{
+	font-size: 16px;
+	font-family: Tahoma;
+	display: block;
+}
+.form-group input[type='text'],input[type='number']{
 	border-radius: 5px;
-	border-style: none;
-	font-family: tahoma;
-	font-size: 15px;
-
-
+	padding: 5px 5px;
+	font-size: 14px;
+	font-family: Tahoma;
+	margin: 5px 0;
+	border: 2px solid #00aced;
+	outline: none;
 }
-.card-info input[type="submit"]:hover{
-	background-color:  #5cb85c;
-}
-.form-container{
-	position: absolute;
-	margin-top: 20px;
-	width: 350px;
-	height:500px; 
-	background-color: #fff;
-	margin-left: 400px;
-	border-radius:5px;
-}
-.header{
-	margin-top: 0px;
-	height: 40px;
-	width: 340px;
-	background-color: skyblue;
-	padding: 5px;
-	border-radius: 5px
-}
-.header h4{
-	font-size: 17px;
+.modal-info input[type ='submit']{
 	color: #fff;
+	font-size:15px;
+	height: 40px;
+	width: 170px;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	margin-top: 5px;
+	background: #00aced;
+	border-style: none;
+}
+.modal-info input[type ='submit']:hover{
+	background-color:#6c5ce7;
+	opacity: 0.8; 
+	transition: all 0.5s ease-in-out;
+}
+.err-message{
+	color: red;
+}
+.res-message{
+	margin-left: 30px;
+	color: #008000;
 }
 table{
 	width: 100%;
@@ -213,6 +239,7 @@ table tbody td {
 	background-color:green;
 
 }
+
 
 
 

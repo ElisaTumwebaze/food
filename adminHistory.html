@@ -3,58 +3,52 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>first food first</title>
+	<title>fast food fasst history</title>
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<!--font icons -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
 <body>
-
 	<nav class="nav-main">
 		<div class="btn-toggle-nav" onclick="toggleNav()"></div>
 		<ul>
-			<li><a href="">First Food First</a></li>
-			
+			<li><a href="">Fast-Food-Fast </a></li>	
 		</ul>
 	</nav>
 	<aside class="nav-sidebar">
 		<ul>
 			<li><span><i class="fa fa-home"></i> Dash Board</span> </li>
-			<li><a href="accept.html"><i class="fa fa-check-circle"></i> Accept &amp; Decline </a></li>
 			<li><a href="editmenu.html"><i class="fa fa-edit"></i>Edit menu</a></li>
 			<li><a href="editstatus.html"><i class="fa fa-wrench"></i>
 			Edit Order Status</a></li>
 			<li><a href="adminorder.html"><i class="fa fa-shopping-cart"></i>  Make order</a></li>
+            <li><a href="adminHistory.html"> <i class="fa fa-map"></i> View Order History</a></li>
 			<li><a href="index.html"><i class="fa fa-user"></i> Logout</a></li>
+		</ul>
 		</ul>
 		
 	</aside>
 	<div class="main-content">
 		<div class="info">
-			<div class="card-wrap">
-				<div class="card-image">
-					<img src="img/chicken.jpg" height="250px" width="348px">
-				</div>
-				<div class="card-info">
-				<div class="card-title">
-					<h4>Breakfast Katogo</h4>
-					
-				</div>
-				<div class="card-info">
-					<p>Price:<b>2500 UGX</b></p>
-					<p>Katogo is available in many forms</p>
-					<p>Quantity: <input type="number" name="" placeholder="Enter Quantity"></p>
-					<p>Location: <input type="text" name="" placeholder="Enter Your Location"></p>
-					<input type="submit" name="" value="Order Now">
-
-				</div>
-				
-			</div>
-			</div>
-			
-		
+			<div class="order-table">	
+		<table border="1px" id="orders-table">
+			<caption><h2>Your Order History</h2></caption>
+			<thead>
+				<th>ID</th>
+				<th>Food Name</th>
+				<th>Unit Price</th>
+				<th>Quantity</th>
+				<th>Amount</th>
+				<th>status</th>	
+			</thead>
+			<tbody id="table-body">
+				<!--table body-->
+			</tbody>
+		</table>
+		</div>
+		</div>		
 	</div>
-
 </body>
+<script type="text/javascript" src="./js/orderHistory.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>
 </html>
