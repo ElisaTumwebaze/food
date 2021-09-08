@@ -31,7 +31,7 @@ function displayMenuItem(menuItem){
     var row = `
     <tr>
         <td>${item.food_id}</td>
-        <td><img src="https://elisa-food-api.herokuapp.com/${item.photo}" width="50" height="50"></td>
+        <td><img src="${item.photo}" width="50" height="50"></td>
         <td>${item.food_name}</td>
         <td>${item.price}</td>
         <td>
